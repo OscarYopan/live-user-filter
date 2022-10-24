@@ -9,7 +9,7 @@
   --color2: #AB05F2;
   --color3: #6805F2;
   --color4: #1D1C40;
-  --colo45: #F26444;
+  --color5: #F26444;
 
   /* https://color.adobe.com/pt/trends/Ui/ux */
 }
@@ -20,6 +20,7 @@ html{
 }
 
 body{
+  background-color: #404040;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +29,7 @@ body{
 }
 
 .container {
+  background-color: var(--color4);
   border-radius: .5rem;
   box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.3);
   overflow: hidden;
@@ -39,5 +41,71 @@ body{
 }
 
 .subtitle {
-  margin: .5rem 0 2rem;
+  font-size: 1.4rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.header {
+  background-color: var(--color5);
+  color:var(--color4);
+  padding: 2rem 1rem;
+}
+
+.header input {
+  background-color: var(--color4);
+  width: 100%;
+  padding: .5rem 1rem;
+  color: var(--color1);
+  margin-top: 1rem;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.user-list {
+  list-style-type: none;
+  color: var(--color1);
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.user-list li img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 5rem;
+  width: 5rem;
+}
+
+.user-list li .user-info {
+  margin-left: 2rem;
+}
+
+.user-list li .user-info h4 {
+  font-size: 1.6rem;
+  margin: 0 0 1rem 0;
+}
+
+.user-list li .user-info p {
+  font-size: 1.2rem;
+}
+
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.user-list li h3 {
+  font-size: 1.6rem;
+}
+
+.user-list li.hide {
+  display: none;
 }
