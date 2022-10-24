@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color1: #D93B92;
+  --color2: #AB05F2;
+  --color3: #6805F2;
+  --color4: #1D1C40;
+  --colo45: #F26444;
+
+  /* https://color.adobe.com/pt/trends/Ui/ux */
+}
+
 html{
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
