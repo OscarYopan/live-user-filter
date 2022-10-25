@@ -99,7 +99,7 @@ body{
 }
 
 .user-list li:not(:last-of-type) {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color5);
 }
 
 .user-list li h3 {
