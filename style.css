@@ -109,3 +109,14 @@ body{
 .user-list li.hide {
   display: none;
 }
+
+@media (max-width: 500px){
+  .container{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .user-list{
+    max-height: 100vh;
+  }
+}
