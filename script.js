@@ -1,9 +1,12 @@
-const result = document.querySelector('#result ')
-const filter = document.querySelector('#filter ')
+const result = document.querySelector('#result')
+const filter = document.querySelector('#filter')
 const listItems= []
 
 getData()
 
+filter.addEventListener('input', (e) => filterData(e.target.value))
+
+// Get Data from the API
 async function getData() {
   const res = await fetch('https://randomuser.me/api?results=50')
 
@@ -27,4 +30,16 @@ async function getData() {
 
     result.appendChild(li)
   });
+}
+
+// Aply Filter in the search
+
+function filterData(searchTerm) {
+  listItems.forEach(item => {
+    if(item.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
+      item.classList.remove('hide')
+    } else {
+      item.classList.add('hide')
+    }
+  })
 }
